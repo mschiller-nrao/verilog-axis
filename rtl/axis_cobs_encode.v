@@ -144,7 +144,12 @@ code_fifo_inst (
     .m_axis_tid(),
     .m_axis_tdest(),
     .m_axis_tuser(code_fifo_out_tuser),
+    // Pause
+    .pause_req(1'b0),
+    .pause_ack(),
     // Status
+    .status_depth(),
+    .status_depth_commit(),
     .status_overflow(),
     .status_bad_frame(),
     .status_good_frame()
@@ -181,7 +186,12 @@ data_fifo_inst (
     .m_axis_tid(),
     .m_axis_tdest(),
     .m_axis_tuser(),
+    // Pause
+    .pause_req(1'b0),
+    .pause_ack(),
     // Status
+    .status_depth(),
+    .status_depth_commit(),
     .status_overflow(),
     .status_bad_frame(),
     .status_good_frame()
